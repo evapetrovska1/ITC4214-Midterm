@@ -1,0 +1,25 @@
+/* TITLE AND SUBTITLE */
+.hero-title {
+    align-content: center;
+}
+.hero-subtitle {
+}
+
+/* FLOATING CHARACTERS */
+.floating-character {
+}
+.hero-section {
+    border: 3px solid
+}
+.character-size {
+    max-width: 100%; 
+    height: auto; 
+}
+#mort-main { 
+    max-width: 70%; /* The image will take up 70% at max of the width of its container */
+    height: auto; 
+}
+#puss-main { 
+    max-width: 90%; 
+    height: auto; 
+}

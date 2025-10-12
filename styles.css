@@ -6,11 +6,6 @@
 }
 
 /* FLOATING CHARACTERS */
-.floating-character {
-}
-.hero-section {
-    border: 3px solid
-}
 .character-size {
     max-width: 100%; 
     height: auto; 
@@ -22,4 +17,29 @@
 #puss-main { 
     max-width: 90%; 
     height: auto; 
+}
+/*Animation for floating characters*/
+.floating-character {
+    animation: slideIn 1.5s ease-out forwards; /* Animation that slides in, starts fast ends slow, and keeps the final state */
+    opacity: 0; /* Start invisible */
+}
+/* Special rule for centered characters */
+.floating-character[style*="transform: translateX(-50%)"] {
+    animation: fadeIn 1.5s ease-out forwards; /* Fade in animation */
+    opacity: 0; /* Start invisible */
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Start 50px below its final position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at its original position */
+    }
 }

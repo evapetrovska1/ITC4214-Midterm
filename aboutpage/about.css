@@ -1,0 +1,146 @@
+/* ------ ABOUT US CSS ------ */
+
+/* TITLE SECTION */
+.about-main { /* set the background image */
+    background: 
+        url('../images/about/about.jpg') center/cover no-repeat;
+    position: relative;
+    min-height: 60vh;
+    overflow: hidden;
+}
+/* Gradient overlay with blue colors */
+.about-main::before { /* Before the main content loads */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient( /* Creates a gradient overlay at 45 degrees */
+        45deg,
+        rgba(70, 117, 186, 0.7),
+        rgba(129, 152, 187, 0.7),
+        rgba(181, 201, 232, 0.7)
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    z-index: 1;
+}
+/* Ensure content is above the overlay */
+.about-main .container {
+    position: relative;
+    z-index: 2;
+}
+/* Animation for gradient shift */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; } /* Start at the left */
+    50% { background-position: 100% 50%; } /* Move to the right */
+    100% { background-position: 0% 50%; } /* Return to the left */
+}
+
+/* HISTORY SECTION */
+.section1 {
+    font-family: 'Subtitle', Arial, sans-serif;
+    background-color: #8198bb;
+}
+
+/* FEATURES SECTION */
+.section2 {
+    font-family: 'Subtitle', Arial, sans-serif;
+}
+/* Making the circle image with gradient hover effect */
+.circle-image {
+    width: 100px;
+    height: 100px;
+    background-color: #1d3f72;
+    border-radius: 50%; /* Makes it a circle */
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(29, 63, 114, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.circle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+.circle-image::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+/* Hover effect for circle image */
+.circle-image:hover::before {
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+.circle-image:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 15px 35px rgba(29, 63, 114, 0.4);
+}
+
+/* TEAM SECTION */
+.section3 {
+    font-family: 'Subtitle', Arial, sans-serif;
+}
+.flip-card {
+    perspective: 1000px; /* Enables 3D space for flip effect */
+    height: 280px; /* Fixed height for consistent flip */
+    cursor: pointer; /* Shows it's clickable */
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.9s; /* Smooth flip animation */
+    transform-style: preserve-3d; /* Enables 3D transformation */
+    box-shadow: 0 10px 25px rgba(29, 63, 114, 0.2); /* Your existing shadow */
+}
+/* Flip on hover */
+.flip-card.flipped .flip-card-inner { /* flipped class is added on click */
+    transform: rotateY(180deg); /* The flip animation */
+}
+/* Front and back card faces */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back when facing away */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Front card styling */
+.flip-card-front {
+    background: white; /* Clean white background */
+}
+/* Back card styling */
+.flip-card-back {
+    background: linear-gradient(135deg, #1d3f72, #8198bb); /* Your brand gradient */
+    color: white;
+    transform: rotateY(180deg); /* Start flipped */
+}
+/* Team avatar styling */
+.team-avatar {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border: 1px solid #1d3f72;
+}
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+}

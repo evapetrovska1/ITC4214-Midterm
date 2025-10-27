@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make sure the website works properly across devices -->
+    <title> DreamWorks Studio Hub </title>
+    <!-- Import Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../components/components.css">
+    <link rel="stylesheet" href="about.css">
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="../components/components.js" defer></script>
+    <script src="./about.js" defer></script>
+
+</head>
+<body>
+    <!--  ----- NAVIGATION BAR ----- -->
+    <div id="navbar"></div>
+
+    <!-- ----- MAIN TITLE AND SUBTITLE ----- -->
+    <section class="about-main py-5 d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="about-title display-3 fw-bold mb-3 p-3"> About DreamWorks Studio Hub </h1>
+            <h2 class="about-subtitle lead fs-4 mb-4 p-3">Learn More About Us and Our Mission</h2>
+        </div>
+    </section>
+
+    <!-- ----- ABOUT CONTENT ----- -->
+
+    <!-- Section: History -->
+    <section class="section1 p-2 mx-4 my-4 rounded"> 
+    <div class="container-lg">
+        <div class="row align-items-center g-5">
+            <!-- Image will appear on left, text on the right -->
+            <div class="col-lg-6 order-2 order-md-1"> <!-- Image will appear FIRST on desktop, SECOND on smaller screens -->
+                <figure class="figure">
+                    <img src="../images/about/antz.jpg" alt="DreamWorks first film Antz" class="figure-img img-fluid rounded shadow">
+                    <figcaption class="figure-caption text-center mt-2">
+                        <em>"Antz" (1998) - DreamWorks Animation's first feature film </em>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-6 order-1 order-md-2">
+                <h1 class="my-2 mb-2 text-center"> The Beginnings </h1>
+                <p class="lead mb-4">
+                    In 1998, just four years after our founding, DreamWorks Animation made history with 
+                    <strong>"Antz"</strong> - our very first animated feature that announced our arrival as a creative 
+                    force to be reckoned with.
+                </p>
+                <p class="mb-4">
+                    "Antz" was more than just a film; it was our declaration of intent. Featuring the voice 
+                    talents of Woody Allen, Sharon Stone, and Sylvester Stallone, this groundbreaking CGI 
+                    adventure showcased our commitment to sophisticated storytelling that appealed to both 
+                    children and adults.
+                </p>
+                <p class="mb-4">
+                    While competing with another insect-themed animation that year, "Antz" demonstrated 
+                    DreamWorks' signature style: witty humor, memorable characters, and technological 
+                    innovation that would become our hallmark for decades to come.
+                </p>
+            </div>
+        </div>
+    </div>   
+    </section>
+
+    <!-- Section: Our Purpose -->
+    <section class="section2 p-2 mx-4 my-4 rounded"> 
+    <div class="container-lg">
+        <h1 class="my-2 mb-2 text-center"> Why We Built This Hub </h1>
+        <p class="lead mb-4">
+            DreamWorks Studio Hub was created for you —the fans who laugh with Shrek, 
+            soar with Toothless, and dream with Po. This is your space to dive deeper into the 
+            stories you love.
+        </p>
+
+        <!-- Circular Features WIth Images -->
+        <div class="row justify-content-center g-4">
+            <!-- Feature 1 -->
+            <div class="col-md-4 col-lg-3 text-center">
+                <div class="feature-circle">
+                    <div class="circle-image">
+                        <img src="../images/about/question-mark.png" alt="Question Mark" class="circle-img">
+                    </div>
+                    <h5 class="mt-3 fw-bold">Ask Questions</h5>
+                    <p class="text-muted">Get answers about characters, plots, and hidden details</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-4 col-lg-3 text-center">
+                <div class="feature-circle">
+                    <div class="circle-image">
+                        <img src="../images/about/light-bulb.png" alt="Light Bulb" class="circle-img">
+                    </div>
+                    <h5 class="mt-3 fw-bold">Share Theories</h5>
+                    <p class="text-muted">Discuss fan theories and discover Easter eggs</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-4 col-lg-3 text-center">
+                <div class="feature-circle">
+                    <div class="circle-image">
+                        <img src="../images/about/globus.png" alt="Globus" class="circle-img">
+                    </div>
+                    <h5 class="mt-3 fw-bold">Connect Globally</h5>
+                    <p class="text-muted">Join fans worldwide in epic discussions</p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-md-4 col-lg-3 text-center">
+                <div class="feature-circle">
+                    <div class="circle-image">
+                        <img src="../images/about/magic-wand.png" alt="Magic Wand" class="circle-img">
+                    </div>
+                    <h5 class="mt-3 fw-bold">Explore Magic</h5>
+                    <p class="text-muted">Behind-the-scenes insights and animation secrets</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+    </section>
+
+    <!-- Section: Team Member Grid Cards -->
+    <section class="section3 p-2 mx-4 my-4 rounded"> 
+    <div class="container-lg">
+        <h1 class="my-2 mb-2 text-center"> Meet The Team </h1>
+        <p class="lead mb-4">
+            Our dedicated team of DreamWorks enthusiasts and tech wizards work tirelessly to bring 
+            you the best experience possible. Get to know the faces behind the magic!
+        </p>
+
+        <!-- Rectangle Grid Cards for the Team Members -->
+        <div class="row justify-content-center g-4">
+
+            <!-- Team Member #1 Alice-->
+            <div class="col-md-4 col-lg-3 text-center">
+                <!-- Flip Card Container -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- Front Side of the Card -->
+                         <div class="flip-card-front">
+                            <div class="team-avatar">
+                                <img src="../images/team/Alice.png" alt="Alice Johnson" class="avatar-img">
+                            </div>
+                            <h5 class="mt-1 fw-bold">Alice Johnson</h5>
+                            <p class="text-muted">Front-End Developer</p>
+                            <small class="text-primary">Click to flip →</small>
+                         </div>
+                         <!-- Back Side of the Card -->
+                          <div class="flip-card-back">
+                            <h5 class="fw-bold">Alice Johnson</h5>
+                            <p class="text-muted">Front-End Developer</p>
+                            <p class="mx-2 small">Creates magical user interfaces. Believes every website should have the charm of a DreamWorks animation.</p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member #2 Betty-->
+            <div class="col-md-4 col-lg-3 text-center">
+                <!-- Flip Card Container -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- Front Side of the Card -->
+                         <div class="flip-card-front">
+                            <div class="team-avatar">
+                                <img src="../images/team/Betty.png" alt="Alice Johnson" class="avatar-img">
+                            </div>
+                            <h5 class="mt-1 fw-bold">Betty Green</h5>
+                            <p class="text-muted">UI/UX Designer</p>
+                            <small class="text-primary">Click to flip →</small>
+                         </div>
+                         <!-- Back Side of the Card -->
+                          <div class="flip-card-back">
+                            <h5 class="fw-bold">Betty Green</h5>
+                            <p class="text-muted">Front-End Developer</p>
+                            <p class="mx-2 small">Designs intuitive experiences inspired by character journeys. Quotes Shrek's life lessons daily.</p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member #3 Brent -->
+            <div class="col-md-4 col-lg-3 text-center">
+                <!-- Flip Card Container -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- Front Side of the Card -->
+                         <div class="flip-card-front">
+                            <div class="team-avatar">
+                                <img src="../images/team/Brent.png" alt="Alice Johnson" class="avatar-img">
+                            </div>
+                            <h5 class="mt-1 fw-bold">Brent Smith</h5>
+                            <p class="text-muted">Back-End Developer</p>
+                            <small class="text-primary">Click to flip →</small>
+                         </div>
+                         <!-- Back Side of the Card -->
+                          <div class="flip-card-back">
+                            <h5 class="fw-bold">Brent Smith</h5>
+                            <p class="text-muted">Back-End Developer</p>
+                            <p class="mx-2 small">Builds the engine behind the magic. Finds inspiration in How to Train Your Dragon's technical innovation.</p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member #4 John -->
+            <div class="col-md-4 col-lg-3 text-center">
+                <!-- Flip Card Container -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- Front Side of the Card -->
+                         <div class="flip-card-front">
+                            <div class="team-avatar">
+                                <img src="../images/team/John.png" alt="Alice Johnson" class="avatar-img">
+                            </div>
+                            <h5 class="mt-1 fw-bold">John Williams</h5>
+                            <p class="text-muted">Project Manager</p>
+                            <small class="text-primary">Click to flip →</small>
+                         </div>
+                         <!-- Back Side of the Card -->
+                          <div class="flip-card-back">
+                            <h5 class="fw-bold">John Williams</h5>
+                            <p class="text-muted">Project Manager</p>
+                            <p class="mx-2 small">Keeps the team on track and inspired. Loves the Madagascar crew's teamwork and adventure spirit.</p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member #5 Maurine -->
+            <div class="col-md-4 col-lg-3 text-center">
+                <!-- Flip Card Container -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- Front Side of the Card -->
+                         <div class="flip-card-front">
+                            <div class="team-avatar">
+                                <img src="../images/team/Maurine.png" alt="Alice Johnson" class="avatar-img">
+                            </div>
+                            <h5 class="mt-1 fw-bold">Maurine Garcia</h5>
+                            <p class="text-muted">Content Curator</p>
+                            <small class="text-primary">Click to flip →</small>
+                         </div>
+                         <!-- Back Side of the Card -->
+                          <div class="flip-card-back">
+                            <h5 class="fw-bold">Maurine Garcia</h5>
+                            <p class="text-muted">Content Curator</p>
+                            <p class="mx-2 small">Crafts engaging discussions and discovers hidden Easter eggs. Adores Kung Fu Panda's wisdom and humor.</p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member #6 Max -->
+            <div class="col-md-4 col-lg-3 text-center">
+                <!-- Flip Card Container -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <!-- Front Side of the Card -->
+                         <div class="flip-card-front">
+                            <div class="team-avatar">
+                                <img src="../images/team/Max.png" alt="Alice Johnson" class="avatar-img">
+                            </div>
+                            <h5 class="mt-1 fw-bold">Max Anderson</h5>
+                            <p class="text-muted">Community Moderator</p>
+                            <small class="text-primary">Click to flip →</small>
+                         </div>
+                         <!-- Back Side of the Card -->
+                          <div class="flip-card-back">
+                            <h5 class="fw-bold">Max Anderson</h5>
+                            <p class="text-muted">Community Moderator</p>
+                            <p class="mx-2 small">Ensures friendly conversations and connections. Believes The Prince of Egypt contains animation's most powerful storytelling.</p>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+</body>

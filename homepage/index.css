@@ -1,0 +1,110 @@
+/* ----- LANDING PAGE  CSS ----- */
+.hero-title {
+    align-content: center;
+}
+.hero-subtitle {
+    
+}
+
+/* FLOATING CHARACTERS */
+.character-size {
+    max-width: 100% !important;
+    height: auto !important;
+}
+.character-mort {
+    top: 10% !important;
+    left: 3% !important;
+    width: 35% !important;
+}
+.character-toothless {
+    top: 0% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important; /*Translate moves the image to the center */
+    width: 50% !important;
+}
+.character-puss {
+    top: 10% !important;
+    right: 3% !important;
+    width: 25% !important;
+}
+.character-panda {
+    bottom: 5% !important;
+    left: 3% !important;
+    width: 35% !important;
+}
+.character-alex {
+    bottom: 1% !important;
+    right: 7% !important;
+    width: 20% !important;
+}
+.character-croods {
+    bottom: 1% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important; 
+    width: 20% !important;
+}
+#mort-main { 
+    max-width: 70% !important;/* The image will take up 70% at max of the width of its container */
+    height: auto !important;
+}
+#puss-main { 
+    max-width: 90% !important;
+    height: auto !important;
+}
+/*Animation for floating characters*/
+.floating-character {
+    animation: slideIn 1.5s ease-out forwards; /* Animation that slides in, starts fast ends slow, and keeps the final state */
+    opacity: 0; /* Start invisible */
+}
+/* Special rule for centered characters */
+.floating-character[style*="transform: translateX(-50%)"] {
+    animation: fadeIn 1.5s ease-out forwards; /* Fade in animation */
+    opacity: 0; /* Start invisible */
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Start 50px below its final position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at its original position */
+    }
+}
+/* Hide floating characters when the screen height is too small */
+@media (max-height: 600px) { /* When the viewport height is 600px or less hide the characters */
+  .floating-character {
+    display: none;
+  }
+}
+
+/* MAIN CONTENT */
+.MainContent {
+    font-family: 'Subtitle', Arial, sans-serif;
+    background-color: #8198bb;
+}
+.MeetTheCharacters {
+    font-family: 'Subtitle', Arial, sans-serif;
+}
+/* Select all carousel images */
+#characterCarousel .carousel-item img {
+    transition: transform 0.3s ease; /* Smooth zoom */
+}
+/* Create a consistent size for carousel images */
+.carousel-item img {
+    width: 100%;
+    max-width: 80%;
+    height: 70%;
+}
+/* Zoom in on hover */
+#characterCarousel .carousel-item img:hover {
+    transform: scale(1.05); /* Zoom in 5% */
+}
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(1); /* Inverts colors for better visibility */
+}

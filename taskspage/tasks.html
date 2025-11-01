@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make sure the website works properly across devices -->
+    <title> DreamWorks Discussion Hub </title>
+    <!-- Import Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../components/components.css">
+    <link rel="stylesheet" href="tasks.css">
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="../components/components.js" defer></script>
+    <script src="./tasks.js" defer></script>
+
+</head>
+<body>
+    <!--  ----- NAVIGATION BAR ----- -->
+    <div id="navbar"></div>
+
+    <!-- ----- MAIN TITLE AND SUBTITLE ----- -->
+    <section class="tasks-main py-5 my-4 d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="about-title display-3 fw-bold mb-3 p-3"> DreamWorks Discussion Hub </h1>
+            <h2 class="about-subtitle lead fs-4 mb-4 p-3">Organize your thoughts with ease! </h2>
+        </div>
+    </section>
+
+    <!-- ----- DISCUSSION CONTENT ----- -->
+
+    <!-- Section: Discussion Post Form -->
+    <section class="forms p-2 mx-4 my-4 rounded"> 
+    <div class="container-lg">
+        <h1 class="my-2 mb-3 text-center"> Join The Discussion </h1>
+        <p class="lead mb-5 text-center">
+            Share your thoughts about your favorite DreamWorks movies! Fill out the form below to
+            submit your comments, questions, feedback, or suggestions.
+        </p>
+        
+        <!-- The Form-->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="discussionForm">
+
+                    <!-- Name Fields (optional)-->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label fw-bold">First Name (Optional)</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="e.g., Shrek">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label fw-bold">Last Name (Optional)</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="e.g., The Ogre">
+                        </div>
+                    </div>
+
+                    <!-- Discussion Type (Required) -->
+                    <div class="mb-3">
+                        <label for="discussionType" class="form-label fw-bold">Discussion Type</label>
+                        <!-- Allow users to select one of the available fields -->
+                        <select class="form-select" id="discussionType" required>
+                            <option value="comment">💬 Comment</option>
+                            <option value="question">❓ Question</option>
+                            <option value="theory">🔍 Fan Theory</option>
+                            <option value="review">⭐ Movie Review</option>
+                            <option value="easter-egg">🥚 Easter Egg Found</option>
+                        </select>
+                    </div>
+
+                    <!-- Discussion Topic (Optional)-->
+                    <div class="mb-3">
+                        <label for="discussionTopic" class="form-label fw-bold">Related Movies (Optional):</label>
+                        <!-- Allow users to select multiple fields -->
+                        <!-- Added form-select, multiple, size, and emojis -->
+                        <select class="form-select" id="discussionTopic" multiple size="5">
+                            <!-- Allow the user to select multiple movies -->
+                            <option value="shrek">🟢 Shrek Series</option>
+                            <option value="kung-fu-panda">🐼 Kung Fu Panda Series</option>
+                            <option value="how-to-train-your-dragon">🐉 How to Train Your Dragon Series</option>
+                            <option value="madagascar">🦁 Madagascar Series</option>
+                            <option value="trolls">🌈 Trolls Series</option>
+                            <option value="the-croods">👨‍👩‍👧‍👦 The Croods Series</option>
+                            <option value="megamind">🧠 Megamind</option>
+                            <option value="the-prince-of-egypt">📜 The Prince of Egypt</option>
+                            <option value="the-bad-guys">🦊 The Bad Guys</option>
+                            <option value="boss-baby">👶 The Boss Baby</option>
+                            <option value="home">👽 Home</option>
+                            <option value="turbo">🐌 Turbo</option>
+                            <option value="rise-of-the-guardians">🎅 Rise of the Guardians</option>
+                            <option value="other">🎬 Other DreamWorks Film</option>
+                        </select>
+                        <!-- Help text for multiple selection -->
+                        <div class="form-text">Hold CTRL (or CMD on Mac) to select multiple movies</div>
+                    </div>
+
+                    <!-- Discussion Title Field -->
+                    <div class="mb-3">
+                        <label for="discussionTitle" class="form-label fw-bold">Discussion Title *</label>
+                        <input type="text" class="form-control" id="discussionTitle" placeholder="e.g., Why does Shrek live in a swamp?" required>
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="mb-4">
+                        <label for="discussionMessage" class="form-label fw-bold">Your Message *</label>
+                        <textarea class="form-control" id="discussionMessage" rows="5" maxlength="500" placeholder="Share your thoughts, questions, or discoveries..." required></textarea>
+                        <!-- Counter on the bottom right for the characters -->
+                        <div class="text-end mt-2">
+                            <div class="form-text">
+                                <span id="charCount" class="fw-bold text-success">0</span>/500 characters
+                            </div>
+                        </div>
+                        <!-- Give a warning when the user is approaching the limit-->
+                         <div id="charWarning" class="text-danger small mt-1" style="display: none;">
+                            ⚠️ You're approaching the character limit!
+                        </div>
+                    </div>
+
+                    <!-- Submit Button with icon -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5">
+                            <i class="me-2"></i>🚀 Post to Community
+                        </button>
+                    </div>
+
+                    <!-- Required fields note -->
+                    <div class="text-center mt-3">
+                        <small class="text-muted">* Required fields. Posts without names will appear as "Anonymous".</small>
+                    </div>
+
+                </form>
+            </div>
+    </div> 
+    </section>
+
+    <!-- Section: Display of Discussion Posts -->
+    <section class="posts p-2 mx-4 my-4 rounded"> 
+    <div class="container-lg">
+        <h1 class="my-2 mb-2 text-center"> Community Posts </h1>
+
+        <!-- Filtering & sorting for the posts -->
+        <div class="d-flex justify-content-center mb-4">
+            <div class="row w-100">
+                <!-- Filter 1: By Type -->
+                <div class="col-md-4 mb-2">
+                    <label class="form-label fw-bold">Filter by Type:</label>
+                    <select id="filterType" class="form-select">
+                        <option value="all">📋 All Types</option>
+                        <option value="comment">💬 Comments</option>
+                        <option value="question">❓ Questions</option>
+                        <option value="theory">🔍 Fan Theories</option>
+                        <option value="review">⭐ Movie Reviews</option>
+                        <option value="easter-egg">🥚 Easter Eggs</option>
+                    </select>
+                </div>
+
+                <!-- Filter 2: By Movie Topic -->
+                <div class="col-md-4 mb-2">
+                    <label class="form-label fw-bold">Filter by Movie:</label>
+                    <select id="filterMovie" class="form-select">
+                        <option value="all">🎬 All Movies</option>
+                        <option value="shrek">🟢 Shrek Series</option>
+                        <option value="kung-fu-panda">🐼 Kung Fu Panda Series</option>
+                        <option value="how-to-train-your-dragon">🐉 How to Train Your Dragon Series</option>
+                        <option value="madagascar">🦁 Madagascar Series</option>
+                        <option value="trolls">🌈 Trolls Series</option>
+                        <option value="the-croods">👨‍👩‍👧‍👦 The Croods Series</option>
+                        <option value="megamind">🧠 Megamind</option>
+                        <option value="the-prince-of-egypt">📜 The Prince of Egypt</option>
+                        <option value="the-bad-guys">🦊 The Bad Guys</option>
+                        <option value="boss-baby">👶 The Boss Baby</option>
+                        <option value="home">👽 Home</option>
+                        <option value="turbo">🐌 Turbo</option>
+                        <option value="rise-of-the-guardians">🎅 Rise of the Guardians</option>
+                        <option value="other">🎬 Other DreamWorks Film</option>
+                    </select>
+                </div>
+
+                <!-- Sort 1: By Alphabetical Order -->
+                <div class="col-md-4 mb-2">
+                    <label class="form-label fw-bold">Sort by Title:</label>
+                    <select id="sortOrder" class="form-select">
+                        <option value="az">A → Z</option>
+                        <option value="za">Z → A</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Posts -->
+        <div id="postsContainer">
+            <!-- Posts will be loaded here by tasks.js automatically -->
+            <div class="text-center text-muted py-5">
+                <h4>No posts yet</h4>
+                <p>Be the first to share your thoughts about DreamWorks movies!</p>
+            </div>
+        </div>    
+    </div> 
+    </section>
+
+    <!-- Section: Summary of Posts -->
+    <section class="summary p-2 mx-4 my-4 rounded"> 
+    <div class="container-lg">
+        <h1 class="my-2 mb-3 text-center"> Summary Analytics </h1>
+        <p class="lead mb-5 text-center">
+            Check out your discussion activity summary below! Keep engaging with the community to see your stats grow.
+        </p>
+        
+        <!-- The Form-->
+        <div class="d-flex justify-content-around flex-wrap" id="summaryContainer">
+            <!-- Summary items will appear here automatically -->
+        </div>
+    </div>
+    </section>
+
+    
+
+</body>

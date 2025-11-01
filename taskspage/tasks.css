@@ -1,0 +1,79 @@
+/* ------ TASKS CSS ------ */
+/* TASKS FORM SECTION */
+.forms {
+    font-family: 'Subtitle', Arial, sans-serif;
+    background-color: #8198bb;
+    box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+}
+/* Styles for the character limitation text */
+#charCount {
+    font-weight: 600;
+}
+#charCount.text-success {
+    color: #276e4c !important;
+}
+#charCount.text-warning {
+    color: #9c7500 !important;
+}
+#charCount.text-danger {
+    color: #7c0d18 !important;
+}
+/* Warning message styling */
+#charWarning {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* POSTS SECTION */
+.posts {
+    font-family: 'Subtitle', Arial, sans-serif;
+}
+.filter {
+    background-color: #5f708a;
+}
+/* Individual post styling */
+/* POST CARDS */
+.post-card {
+  background-color: #ffffff;
+  border-left: 6px solid #1d3f72; /* accent border on the left side*/
+  transition: all 0.3s ease; /* makes the entire element responsive */
+}
+
+.post-card:hover {
+  transform: translateY(-5px); /* slight lift on hover */
+  box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+}
+
+/* Post title and preview */
+.post-title {
+  color: #1d3f72;
+}
+
+.post-preview {
+  font-size: 15px;
+  color: #333;
+}
+
+/* Post description */
+.post-author strong {
+  color: #1d3f72;
+}
+
+/* Type badge colors */
+.post-type {
+  font-size: 14px;
+}
+
+.post-type.comment { background-color: #007bff; }
+.post-type.question { background-color: #ffc107; }
+.post-type.theory { background-color: #6f42c1; }
+.post-type.review { background-color: #28a745; }
+.post-type.easter-egg { background-color: #fd7e14; }
+
+/* SUMMARY SECTION */
+.summary {
+    font-family: 'Subtitle', Arial, sans-serif;
+    background-color: #8198bb;
+    box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+}
+

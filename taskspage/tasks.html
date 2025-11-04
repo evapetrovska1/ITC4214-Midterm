@@ -13,6 +13,7 @@
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="../components/components.js" defer></script>
     <script src="./tasks.js" defer></script>
 
@@ -120,8 +121,8 @@
 
                     <!-- Submit Button with icon -->
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-lg px-5">
-                            <i class="me-2"></i>🚀 Post to Community
+                        <button type="submit" class="btn btn-lg px-5 button-general">
+                            <i class="me-2 "></i>🚀 Post to Community
                         </button>
                     </div>
 
@@ -205,7 +206,7 @@
     <div class="container-lg">
         <h1 class="my-2 mb-3 text-center"> Summary Analytics </h1>
         <p class="lead mb-5 text-center">
-            Check out your discussion activity summary below! Keep engaging with the community to see your stats grow.
+            Check out the discussion activity summary below! Keep engaging with the community to see the stats grow.
         </p>
         
         <!-- The Form-->
@@ -215,6 +216,23 @@
     </div>
     </section>
 
+    <!-- Section: Dashboard with PieChart -->
+    <section class="dashboard p-2 mx-4 my-4 rounded"> 
+    <div class="container-lg">
+        <h1 class="my-2 mb-3 text-center"> Dashboard </h1>
+        <p class="lead mb-3 text-center">
+            From Shrek's swamp to Berk's dragons, see which posts capture the most love from our community. The chart below keeps track of favorites at a glance.
+        </p>
+        
+        <!-- The Form-->
+        <div class="d-flex justify-content-around flex-wrap">
+            <canvas id="favoritesChart"></canvas>
+        </div>
+    </div>
+    </section>
     
+    <!--  ----- FOOTER ----- -->
+    <div id="footer"></div>
+
 
 </body>

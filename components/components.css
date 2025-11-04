@@ -4,31 +4,31 @@
     height: 60px;
     width: auto;
 }
+
 .navbar > .container {
     display: flex;
     align-items: center !important; /* Important keyword overrides the Boostrap */
     height: 100%;
 }
+
 .navbar {
-    background-color: #d8ebf9 !important;
+    background: linear-gradient(135deg, #255194 0%, #457dd1 100%);
     min-height: 70px;
     display: flex;
     align-items: center !important;
 }
+
 .navbar-brand {
     display: flex;
     align-items: center;
     height: 100%;
 }
+
 /* Change font for all nav bar text */
 .navbar-brand,
 .navbar-nav .nav-link {
     font-family: 'Subtitle', Arial, sans-serif;
-}
-
-/* Functionality of the nav bar */
-.navbar-collapse {
-    background-color: rgba(113, 160, 204, 0.5);
+    color: white;
 }
 
 /* Hover effects for navbar links */
@@ -38,18 +38,139 @@
 
 /* Make navbar links lighter on hover */
 .navbar-nav .nav-link:hover {
-    background-color: rgba(73, 150, 162, 0.3) !important; /* Light overlay */
-    color: #ffffff !important; /* Keep text white for contrast */
-    transform: scale(1.05); /* Slight zoom effect */
+    background-color: rgba(188, 194, 202, 0.4) !important; /* Light overlay */
+    color: #ffd700 !important; 
+    transform: scale(1.2);
 }
 
-/* Specific hover for your blue navbar */
-.navbar-nav .nav-link:hover {
-    background-color: rgba(144, 184, 203, 0.8) !important; /* Lighter blue version */
+/* Center navigation items horizontally when expanded (desktop view) */
+@media (min-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: center; /* centers the items horizontally */
+        width: 100%;
+    }
+    /* Space between items */
+    .navbar-nav .nav-item {
+        margin: 0 30px;
+    }
 }
 
-/* For the dropdown menu items specifically */
-.navbar-collapse .nav-link:hover {
-    background-color: rgba(230, 242, 247, 0.8) !important; /* Even lighter for dropdown */
-    color: #608DA2 !important; /* Darker text for contrast */
+
+/* GENERAL BUTTON STYLING */
+.button-general {
+  background-color: #0d6efd;
+  color: white;
+  font-family: 'Subtitle', Arial, sans-serif;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(13, 110, 253, 0.2);
+}
+.button-general:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+  background-color: #125cca;
+}
+
+/* ----- FOOTER ----- */
+.dreamworks-footer {
+    background: linear-gradient(135deg, #255194 0%, #457dd1 100%);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    font-family: 'Subtitle', Arial, sans-serif;;
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.social-link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.footer-links a:hover,
+.social-link:hover {
+    color: #ffd700;
+    opacity: 1;
+    transform: translateX(5px);
+    display: inline-block;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+.copyright {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 1;
+    color: #ffd700;
+}
+
+/* Design for smaller screens */
+@media (max-width: 768px) {
+    .dreamworks-footer {
+        text-align: center;
+    }
+    
+    .social-links {
+        align-items: center;
+    }
+    
+    .footer-link {
+        margin: 0 10px;
+    }
 }

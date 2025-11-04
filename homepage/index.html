@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="../components/components.js" defer></script>
+    <script src="index.js" defer></script>
 
 </head>
 <body>
@@ -31,11 +32,10 @@
             </div>
 
             <!-- FLOATING CHARACTERS -->
-             <!-- this style thing is bad right ...? -->
             <div class="floating-character character-mort position-absolute">
                 <img id="mort-main" src="../images/main/mort-main.png" alt="Mort" class="img-fluid rounded">
             </div>
-            <div class="floating-character character-toothless position-absolute text-center"> <!-- Translate moves the image to the center -->
+            <div class="floating-character character-toothless position-absolute text-center">
                 <img class="character-size" src="../images/main/toothless-main.png" alt="Toothless" class="img-fluid rounded">
             </div>
             <div class="floating-character character-puss position-absolute">
@@ -57,7 +57,7 @@
     <!-- Section: The DreamWorks Experience -->
     <section class="MainContent p-2 mx-5 rounded"> 
     <div class="container-lg">
-        <h1 class="my-2 mb-2"> The DreamWorks Experience </h1>
+        <h1 class="my-2 mb-2 text-center"> The DreamWorks Experience </h1>
         <!-- Create one row with 3 columns for the text -->
         <div class="row mb-4">
         <div class="col-4">
@@ -94,9 +94,9 @@
     </section>
 
     <!-- Section: Meet the Characters -->
-    <section class="MeetTheCharacters p-2 mx-5 my-4">
+    <section class="MeetTheCharacters p-2 mx-5 mt-4 my-4">
         <div class="container">
-            <h1 class="my-2 mb-2"> Meet the Characters </h1>
+            <h1 class="my-2 mb-2 text-center"> Meet the Characters </h1>
             <!-- Bootstrap Carousel -->
             <div id="characterCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000" data-bs-pause="hover"> <!-- Allows the carousel to slide every 10sec, stops when hover -->
                 <div class="carousel-inner">
@@ -145,48 +145,64 @@
         </div>
     </section>
 
+    <!-- Section: Latest Activity -->
+    <section class="latestActivity p-2 mx-5 mt-4 rounded"> 
+    <div class="container-lg">
+        <h1 class="my-2 mb-2 mt-2 text-center"> Latest Activity </h1>
+        <p class="lead mb-5 text-center">
+            Check out the discussion activity summary below! Keep engaging with the community to see the stats grow.
+        </p>
+        
+        <!-- Latest Posts -->
+        <div id="latestPosts">
+            <!-- Posts will be loaded here by index.js automatically -->
+        </div>
+        
+        <!-- Discussion Button -->
+         <div class="text-center mt-4 mb-2">
+            <a href="../taskspage/tasks.html" class="btn btn-lg button-general">
+                See All Discussions 🔍
+            </a>
+        </div>
 
-     <p>
-        What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    </section>
 
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    <!-- Section: Public API -->
+    <section class="catFacts p-2 mx-4 my-4 rounded"> 
+    <div class="container-lg">
+        <h1 class="my-2 mb-2 text-center"> Cat Fact of the Day </h1>
+        <figure class="text-center">
+            <!--- Puss in Boots -->
+            <blockquote class="blockquote">
+                <p>
+                    Collected during my many adventures between sword fights and daring rescues. 
+                    Each fact has been personally tested by yours truly - and I can assure you they're absolutely purrfect!
+                </p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Puss in Boots
+            </figcaption>
+        </figure>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-md-1"> <!-- Image will appear FIRST on desktop, SECOND on smaller screens -->
+                    <img src="../images/main/pussinboots.jpg" alt="Puss in Boots" class="figure-img img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6 order-1 order-md-2 text-center">
+                <div id="catFactDisplay" class="mt-4 fs-5 my-4"></div>
+        
+                <button id="getCatFact" class="btn btn-lg button-general">
+                    🐱 Get New Cat Fact
+                </button>
+            </div>
+        </div>
+    </div>   
+    </section>
 
 
-     </p>
+    <!--  ----- FOOTER ----- -->
+    <div id="footer"></div>
 
-     
     
 
 </body>

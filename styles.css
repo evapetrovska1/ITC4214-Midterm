@@ -16,8 +16,13 @@ h1 {
     text-shadow: 2px 2px #122b4e;
     color: #1d3f72;
 }
-h2 {
+h2, h3, h4, h5 {
     font-family: 'Subtitle', Arial, sans-serif;
     color: #1d3f72;
 }
+
+p {
+    font-family: 'Subtitle', Arial, sans-serif;
+}
+
 

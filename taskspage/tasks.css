@@ -1,9 +1,9 @@
 /* ------ TASKS CSS ------ */
 /* TASKS FORM SECTION */
 .forms {
-    font-family: 'Subtitle', Arial, sans-serif;
-    background-color: #8198bb;
-    box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+  background-color: #8198bb;
+  box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+  font-family: 'Subtitle', Arial, sans-serif;
 }
 /* Styles for the character limitation text */
 #charCount {
@@ -25,14 +25,11 @@
 }
 
 /* POSTS SECTION */
-.posts {
-    font-family: 'Subtitle', Arial, sans-serif;
-}
 .filter {
-    background-color: #5f708a;
+  background-color: #5f708a;
 }
-/* Individual post styling */
-/* POST CARDS */
+
+/* Individual styling for the posts */
 .post-card {
   background-color: #ffffff;
   border-left: 6px solid #1d3f72; /* accent border on the left side*/
@@ -44,14 +41,9 @@
   box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
 }
 
-/* Post title and preview */
+/* Post title */
 .post-title {
   color: #1d3f72;
-}
-
-.post-preview {
-  font-size: 15px;
-  color: #333;
 }
 
 /* Post description */
@@ -59,21 +51,44 @@
   color: #1d3f72;
 }
 
-/* Type badge colors */
+/* Type badge specifications */
 .post-type {
   font-size: 14px;
 }
-
 .post-type.comment { background-color: #007bff; }
 .post-type.question { background-color: #ffc107; }
 .post-type.theory { background-color: #6f42c1; }
 .post-type.review { background-color: #28a745; }
 .post-type.easter-egg { background-color: #fd7e14; }
 
-/* SUMMARY SECTION */
-.summary {
-    font-family: 'Subtitle', Arial, sans-serif;
-    background-color: #8198bb;
-    box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+/* Favorites icon specifications */
+.favorite-icon {
+  font-size: 36px;       /* make it big */
+  color: #bbb;           /* soft gray when not favorited */
+  cursor: pointer;       /* shows clickable hand */
+  margin-right: 12px;    /* spacing from buttons */
+  transition: color 0.3s, transform 0.2s ease; /* smooth hover effect */
+  user-select: none;     /* prevent text selection */
 }
 
+.favorite-icon:hover {
+  color: #ff4d6d;        /* bright pink/red on hover */
+  transform: scale(2); /* small grow on hover */
+}
+
+.favorite-icon.filled {
+  color: #e63946;        /* red when filled */
+}
+
+/* SUMMARY SECTION */
+.summary {
+  background-color: #8198bb;
+  box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+}
+
+/* DASHBOARD SECTION */
+#favoritesChart {
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
+}

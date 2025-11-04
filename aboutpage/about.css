@@ -40,14 +40,11 @@
 
 /* HISTORY SECTION */
 .section1 {
-    font-family: 'Subtitle', Arial, sans-serif;
     background-color: #8198bb;
 }
 
 /* FEATURES SECTION */
-.section2 {
-    font-family: 'Subtitle', Arial, sans-serif;
-}
+
 /* Making the circle image with gradient hover effect */
 .circle-image {
     width: 100px;
@@ -89,7 +86,7 @@
 
 /* TEAM SECTION */
 .section3 {
-    font-family: 'Subtitle', Arial, sans-serif;
+    background-color: #8198bb;
 }
 .flip-card {
     perspective: 1000px; /* Enables 3D space for flip effect */

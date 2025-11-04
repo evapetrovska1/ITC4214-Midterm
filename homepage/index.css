@@ -1,9 +1,6 @@
-/* ----- LANDING PAGE  CSS ----- */
+/* ----- LANDING PAGE CSS ----- */
 .hero-title {
     align-content: center;
-}
-.hero-subtitle {
-    
 }
 
 /* FLOATING CHARACTERS */
@@ -83,14 +80,12 @@
   }
 }
 
-/* MAIN CONTENT */
+/* THE DREAMWORKS EXPERIENCE SECTION */
 .MainContent {
-    font-family: 'Subtitle', Arial, sans-serif;
     background-color: #8198bb;
 }
-.MeetTheCharacters {
-    font-family: 'Subtitle', Arial, sans-serif;
-}
+/* MEET THE CHARACTERS SECTION */
+
 /* Select all carousel images */
 #characterCarousel .carousel-item img {
     transition: transform 0.3s ease; /* Smooth zoom */
@@ -107,4 +102,68 @@
 }
 .carousel-control-prev, .carousel-control-next {
     filter: invert(1); /* Inverts colors for better visibility */
+}
+
+/* LATEST ACTIVITY SECTION */
+.latestActivity {
+    background-color: #8198bb;
+}
+/* Individual styling for the posts */
+.post-card {
+  background-color: #ffffff;
+  border-left: 6px solid #1d3f72; /* accent border on the left side*/
+  transition: all 0.3s ease; /* makes the entire element responsive */
+}
+
+.post-card:hover {
+  transform: translateY(-5px); /* slight lift on hover */
+  box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+}
+
+/* Post title */
+.post-title {
+  color: #1d3f72;
+}
+
+/* Post description */
+.post-author strong {
+  color: #1d3f72;
+}
+
+/* CAT FACTS SECTION */
+.catFacts {
+    position: relative;
+}
+/* Makes a cat emoji that bounces up and down */
+.catFacts::before {
+    content: '🐱';
+    position: absolute;
+    top: 1%; 
+    left: 20%;
+    font-size: 3rem;
+    opacity: 0.3;
+    animation: float 3s ease-in-out infinite;
+}
+/* Resizing for medium screens (tablets) */
+@media (max-width: 992px) {
+    .catFacts::before {
+        left: 5%;    
+        font-size: 1.8rem;
+    }
+}
+/* Resizing for small screens (mobile) */
+@media (max-width: 768px) {
+    .catFacts::before {
+        left: 1%;
+        font-size: 1.5rem;
+    }
+}
+/* Animation that makes the cat emoji float up and down */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Normal position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up 10 pixels */
+    }
 }

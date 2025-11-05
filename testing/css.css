@@ -427,3 +427,66 @@
     line-height: 36px;
   }
 }
+
+/* SIMPLE SOCIAL MEDIA SQUARES */
+.social-link-square {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.social-link-square:hover {
+    transform: translateY(-5px);
+    color: inherit;
+}
+
+.social-square {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #1d3f72;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.social-link-square:hover .social-square {
+    border-color: #ffd700;
+    box-shadow: 0 8px 20px rgba(29, 63, 114, 0.3);
+}
+
+.social-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-link-square h6 {
+    color: #1d3f72;
+    font-family: 'Subtitle', Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.social-link-square:hover h6 {
+    color: #ffd700;
+}
+
+/* Dark Mode */
+body.dark-mode .social-square {
+    border-color: #4299e1;
+    background: #2d3748;
+}
+
+body.dark-mode .social-link-square:hover .social-square {
+    border-color: #f6e05e;
+}
+
+body.dark-mode .social-link-square h6 {
+    color: #90cdf4;
+}
+
+body.dark-mode .social-link-square:hover h6 {
+    color: #f6e05e;
+}

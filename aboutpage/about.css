@@ -18,9 +18,9 @@
     bottom: 0;
     background: linear-gradient( /* Creates a gradient overlay at 45 degrees */
         45deg,
-        rgba(70, 117, 186, 0.7),
-        rgba(129, 152, 187, 0.7),
-        rgba(181, 201, 232, 0.7)
+        rgba(70, 117, 186, 0.5),
+        rgba(129, 152, 187, 0.5),
+        rgba(181, 201, 232, 0.5)
     );
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
@@ -140,4 +140,33 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the container */
+}
+
+/* DARK MODE STYLES */
+body.dark-mode .section1,
+body.dark-mode .section3 {
+    background-color: #1a3b6d;
+}
+body.dark-mode .section1 figcaption {
+    color: #e2e8f0 !important;
+}
+body.dark-mode .text-muted {
+    color: #a0aec0 !important;
+}
+body.dark-mode .flip-card-front {
+    background-color: #2959a0;
+}
+body.dark-mode small.text-primary {
+    color: #a0aec0 !important;
+}
+/* Add a dark overlay on top of the existing gradient */
+body.dark-mode .about-main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(28, 58, 90, 0.4);
+    z-index: 2; /* Higher than the gradient overlay */
 }

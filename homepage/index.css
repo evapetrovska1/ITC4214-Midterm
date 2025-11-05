@@ -84,6 +84,7 @@
 .MainContent {
     background-color: #8198bb;
 }
+
 /* MEET THE CHARACTERS SECTION */
 
 /* Select all carousel images */
@@ -166,4 +167,10 @@
     50% {
         transform: translateY(-10px); /* Move up 10 pixels */
     }
+}
+
+/* DARK MODE STYLES */
+body.dark-mode .MainContent,
+body.dark-mode .latestActivity {
+    background-color: #1a3b6d;
 }

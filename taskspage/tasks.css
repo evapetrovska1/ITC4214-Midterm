@@ -25,6 +25,10 @@
 }
 
 /* POSTS SECTION */
+.posts {
+  font-family: 'Subtitle', Arial, sans-serif;
+}
+
 .filter {
   background-color: #5f708a;
 }
@@ -85,10 +89,29 @@
   background-color: #8198bb;
   box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
 }
+#summaryContainer {
+  font-family: 'Subtitle', Arial, sans-serif;
+}
 
 /* DASHBOARD SECTION */
 #favoritesChart {
   height: 50%;
   width: 50%;
   margin: 0 auto;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode .forms,
+body.dark-mode .summary{
+  background-color: #1a3b6d;
+}
+body.dark-mode .post-card {
+  background-color: #3c5780;
+}
+body.dark-mode .post-author,
+body.dark-mode #charWarning,
+body.dark-mode .form-text,
+body.dark-mode .text-muted,
+body.dark-mode .post-author strong {
+    color: rgb(230, 230, 230) !important;
 }

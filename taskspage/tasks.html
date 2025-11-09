@@ -25,8 +25,8 @@
     <!-- ----- MAIN TITLE AND SUBTITLE ----- -->
     <section class="tasks-main py-5 my-4 d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="about-title display-3 fw-bold mb-3 p-3"> DreamWorks Discussion Hub </h1>
-            <h2 class="about-subtitle lead fs-4 mb-4 p-3">Organize your thoughts with ease! </h2>
+            <h1 class="display-3 fw-bold mb-3 p-3"> DreamWorks Discussion Hub </h1>
+            <h2 class="lead fs-4 mb-4 p-3">Organize your thoughts with ease! </h2>
         </div>
     </section>
 
@@ -60,7 +60,7 @@
 
                     <!-- Discussion Type (Required) -->
                     <div class="mb-3">
-                        <label for="discussionType" class="form-label fw-bold">Discussion Type</label>
+                        <label for="discussionType" class="form-label fw-bold">Discussion Type *</label>
                         <!-- Allow users to select one of the available fields -->
                         <select class="form-select" id="discussionType" required>
                             <option value="comment">💬 Comment</option>
@@ -113,13 +113,13 @@
                                 <span id="charCount" class="fw-bold text-success">0</span>/500 characters
                             </div>
                         </div>
-                        <!-- Give a warning when the user is approaching the limit-->
+                        <!-- Give a warning when the user is approaching the limit -->
                          <div id="charWarning" class="text-danger small mt-1" style="display: none;">
                             ⚠️ You're approaching the character limit!
                         </div>
                     </div>
 
-                    <!-- Submit Button with icon -->
+                    <!-- Submit button  -->
                     <div class="text-center">
                         <button type="submit" class="btn btn-lg px-5 button-general">
                             <i class="me-2 "></i>🚀 Post to Community
@@ -193,6 +193,8 @@
         <!-- Posts -->
         <div id="postsContainer">
             <!-- Posts will be loaded here by tasks.js automatically -->
+
+            <!-- If no posts, display the error message -->
             <div class="text-center text-muted py-5">
                 <h4>No posts yet</h4>
                 <p>Be the first to share your thoughts about DreamWorks movies!</p>
@@ -216,17 +218,29 @@
     </div>
     </section>
 
-    <!-- Section: Dashboard with PieChart -->
+    <!-- Section: Dashboard with Pie Chart -->
     <section class="dashboard p-2 mx-4 my-4 rounded"> 
     <div class="container-lg">
         <h1 class="my-2 mb-3 text-center"> Dashboard </h1>
         <p class="lead mb-3 text-center">
-            From Shrek's swamp to Berk's dragons, see which posts capture the most love from our community. The chart below keeps track of favorites at a glance.
+            Get ready for fan-fueled fun! From Shrek's swamp gossip to Berk's dragon debates, this chart shows which post types steal the spotlight — 
+            Comments 💬, Questions ❓, Fan Theories 🔍, Reviews ⭐, and Easter Eggs 🥚.
         </p>
-        
-        <!-- The Form-->
-        <div class="d-flex justify-content-around flex-wrap">
-            <canvas id="favoritesChart"></canvas>
+
+        <!-- Pie chart with description -->
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6 d-flex justify-content-around flex-wrap">
+                <canvas id="chartTypes"> <!-- the pie chart will load here from tasks.js --> </canvas>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-around flex-wrap">
+                <p>
+                    This isn't just data - it's the heartbeat of our animated universe! Each slice represents a different portal into DreamWorks magic: Comments are our 
+                    'Once Upon a Time' moments, Questions are our 'I wonder what would happen if' adventures, Theories are our 'Behind the Animation' secrets, Reviews are our 
+                    'You've Got to See This' recommendations, and Easter Eggs are our 'Did You Notice?' treasure hunts. Together, they form the ultimate DreamWorks storybook 
+                    written by fans like you!
+                </p>
+            </div>
+            
         </div>
     </div>
     </section>

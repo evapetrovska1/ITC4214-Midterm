@@ -29,6 +29,7 @@
                     <!-- Title & Subtitle -->
                     <h1 class="hero-title display-3 fw-bold mb-3 p-3">DreamWorks Discussion Hub</h1>
                     <h2 class="hero-subtitle lead fs-4 mb-4 p-3">Where Magic Comes to Life</h2>
+                </div>
             </div>
 
             <!-- FLOATING CHARACTERS -->
@@ -50,6 +51,7 @@
             <div class="floating-character character-croods position-absolute"> 
                 <img class="character-size" src="../images/main/croods-main.png" alt="Alex the Lion" class="img-fluid character-large rounded">
             </div>
+        </div>
     </section>
 
     <!-- ----- MAIN CONTENT ----- -->
@@ -82,11 +84,11 @@
             </div>
             <div class="col-4">
                 <div class="border p-3">
-                    <h2 class="mb-0 fs-4">Animation Innovation</h2>
+                    <h2 class="mb-0 fs-4">DreamWorks Discussion Hub</h2>
                     <p class="mb-0">
-                        We pioneered realistic fur and hair rendering technology, developed proprietary animation software, and consistently push the boundaries of 
-                        3D animation. From the stunning water effects in How to Train Your Dragon to the expressive character animations in The Bad Guys, our technical 
-                        innovations have raised industry standards while serving our creative vision.
+                        Welcome to the heart of DreamWorks fandom! Our discussion hub brings together fans from around the world to share their love for animated adventures. 
+                        Create posts about your favorite characters, debate the best movie moments, and connect with fellow animation enthusiasts. 
+                    Whether you're team Shrek or team Po, this is your space to celebrate the magic of DreamWorks together!
                     </p>
                 </div>
             </div>
@@ -98,6 +100,7 @@
     <section class="MeetTheCharacters p-2 mx-5 mt-4 my-4">
         <div class="container">
             <h1 class="my-2 mb-2 text-center"> Meet the Characters </h1>
+
             <!-- Bootstrap Carousel -->
             <div id="characterCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000" data-bs-pause="hover"> <!-- Allows the carousel to slide every 10sec, stops when hover -->
                 <div class="carousel-inner">
@@ -107,29 +110,33 @@
                         <img src="../images/carousel/madagascar.jpg" class="d-block mx-auto w-60 rounded" alt="Madagascar Characters">
                         <h2 class="mt-3"> Madagascar</h2>
                         <p> Meet Melman the giraffe, Marty the zebra, Alex the lion, and Gloria the hippo! </p>
-                    </div>  
+                    </div>
+
                     <!-- Slide 2 -->
                     <div class="carousel-item text-center">
-                        <img src="../images/carousel/kungfu.jpg" class="d-block mx-auto w-60 rounded" alt="Kung Fu Panda">
+                        <img src="../images/carousel/kungfu.jpg" class="d-block mx-auto w-60 rounded" alt="Kung Fu Panda Characters">
                         <h2 class="mt-3"> Kung Fu Panda</h2>
                         <p>Meet Po, the panda that knows Kung Fu better than anyone!</p>
                     </div>                  
+                    
                     <!-- Slide 3 -->
                     <div class="carousel-item text-center">
-                        <img src="../images/carousel/megamind.jpg" class="d-block mx-auto w-60 rounded" alt="MegaMind">
+                        <img src="../images/carousel/megamind.jpg" class="d-block mx-auto w-60 rounded" alt="MegaMind Characters">
                         <h2 class="mt-3"> Megamind </h2>
                         <p> What about Megamind? The evil supervillian forced to be a hero...</p>
                     </div>
+                    
                     <!-- Slide 4 -->
                     <div class="carousel-item text-center">
                         
-                        <img src="../images/carousel/howtotrain.jpg" class="d-block mx-auto w-60 rounded" alt="How to Train Your Dragon">
+                        <img src="../images/carousel/howtotrain.jpg" class="d-block mx-auto w-60 rounded" alt="How to Train Your Dragon Characters">
                         <h2 class="mt-3">How to Train Your Dragon</h2>
                         <p>Join Hiccup and Toothless as they explore friendship, courage, and dragons!</p>
                     </div>
+                    
                     <!-- Slide 5 -->
                     <div class="carousel-item text-center">
-                        <img src="../images/carousel/trolls.jpg" class="d-block mx-auto w-60 rounded" alt="Trolls">
+                        <img src="../images/carousel/trolls.jpg" class="d-block mx-auto w-60 rounded" alt="Trolls Characters">
                         <h2 class="mt-3">Trolls</h2>
                         <p>Poppy and Branch spread music, happiness, and lots of colorful chaos!</p>
                     </div>
@@ -161,11 +168,10 @@
         
         <!-- Discussion Button -->
          <div class="text-center mt-4 mb-2">
-            <a href="../taskspage/tasks.html" class="btn btn-lg button-general">
+            <a href="../taskspage/tasks.html" class="btn btn-lg button-general"> <!-- button that takes user to tasks page -->
                 See All Discussions 🔍
             </a>
         </div>
-
     </div>
     </section>
 
@@ -190,8 +196,11 @@
                     <img src="../images/main/pussinboots.jpg" alt="Puss in Boots" class="figure-img img-fluid rounded shadow">
             </div>
             <div class="col-lg-6 order-1 order-md-2 text-center">
-                <div id="catFactDisplay" class="mt-4 fs-5 my-4"></div>
-        
+                <div id="catFactDisplay" class="mt-4 fs-5 my-4">
+                    <!-- Cat fact will get loaded here by index.js -->
+                </div>
+                
+                <!-- Button to get new cat fact -->
                 <button id="getCatFact" class="btn btn-lg button-general">
                     🐱 Get New Cat Fact
                 </button>
@@ -200,10 +209,7 @@
     </div>   
     </section>
 
-
     <!--  ----- FOOTER ----- -->
     <div id="footer"></div>
-
-    
 
 </body>

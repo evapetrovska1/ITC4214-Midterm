@@ -44,7 +44,6 @@
 }
 
 /* FEATURES SECTION */
-
 /* Making the circle image with gradient hover effect */
 .circle-image {
     width: 100px;
@@ -57,12 +56,14 @@
     position: relative;
     overflow: hidden;
 }
+
 .circle-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.3s ease;
 }
+
 .circle-image::before {
     content: '';
     position: absolute;
@@ -74,6 +75,7 @@
     transform: rotate(45deg);
     transition: all 0.6s ease;
 }
+
 /* Hover effect for circle image */
 .circle-image:hover::before {
     transform: rotate(45deg) translate(50%, 50%);
@@ -88,11 +90,14 @@
 .section3 {
     background-color: #8198bb;
 }
+
 .flip-card {
     perspective: 1000px; /* Enables 3D space for flip effect */
     height: 280px; /* Fixed height for consistent flip */
     cursor: pointer; /* Shows it's clickable */
+    font-family: 'Subtitle', Arial, sans-serif;
 }
+
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -103,10 +108,12 @@
     transform-style: preserve-3d; /* Enables 3D transformation */
     box-shadow: 0 10px 25px rgba(29, 63, 114, 0.2);
 }
+
 /* Flip on hover */
 .flip-card.flipped .flip-card-inner { /* flipped class is added on click */
     transform: rotateY(180deg); /* The flip animation */
 }
+
 /* Front and back card faces */
 .flip-card-front, .flip-card-back {
     position: absolute;
@@ -158,15 +165,4 @@ body.dark-mode .flip-card-front {
 }
 body.dark-mode small.text-primary {
     color: #a0aec0 !important;
-}
-/* Add a dark overlay on top of the existing gradient */
-body.dark-mode .about-main::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(28, 58, 90, 0.4);
-    z-index: 2; /* Higher than the gradient overlay */
 }

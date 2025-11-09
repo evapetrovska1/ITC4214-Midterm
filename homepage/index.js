@@ -1,5 +1,8 @@
 $(document).ready(function() {
-    // Load the posts from the localStorage
+    /* ------------------------------------
+    VIEWING MOST RECENT POSTS
+    ------------------------------------ */ 
+    // Load the posts from the local storage
     const allPosts = JSON.parse(localStorage.getItem('posts')) || [];
     
     // Sort the posts by the date (newest first)
@@ -8,6 +11,7 @@ $(document).ready(function() {
     // Take the 3 most recent ones
     const recentPosts = sortedPosts.slice(0,3);
     
+    // If there are no posts, display error message
     if (recentPosts.length === 0) {
         const message = `
             <div class="text-center text-muted py-5">
@@ -17,7 +21,8 @@ $(document).ready(function() {
             `;
             $('#latestPosts').html(message);
     }
-    // Render each recent post
+
+    // Render each recent post with HTML
     recentPosts.forEach(post => {
         const postHtml = `
             <div class="post-card mb-4 p-3 rounded shadow-sm" data-id="${post.id}">
@@ -35,7 +40,10 @@ $(document).ready(function() {
         $('#latestPosts').append(postHtml);
     });
 
-    // Handle the button click
+    /* ------------------------------------
+    PUBLIC API HANDLER
+    ------------------------------------ */ 
+    // Handle the public API button
     $('#getCatFact').click(function () {
         const $display = $('#catFactDisplay');
         $display.text('Loading a new cat fact... 🐾');
@@ -47,7 +55,7 @@ $(document).ready(function() {
             return response.json();
         })
         .then(data => {
-            // Display the cat fact
+            // Display the cat fact in the div
             $display.html(`🐈 ${data.fact}`);
         })
         .catch(error => {

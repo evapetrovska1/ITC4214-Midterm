@@ -1,4 +1,5 @@
 /* ------ TASKS CSS ------ */
+
 /* TASKS FORM SECTION */
 .forms {
   background-color: #8198bb;
@@ -94,13 +95,16 @@
 }
 
 /* DASHBOARD SECTION */
-#favoritesChart {
-  height: 50%;
-  width: 50%;
+#chartTypes {
+  max-width: 400px; 
+  max-height: 400px; 
+  width: 100%;  
+  height: auto;      /* Maintain the aspect ratio */
   margin: 0 auto;
 }
 
 /* DARK MODE STYLES */
+
 body.dark-mode .forms,
 body.dark-mode .summary{
   background-color: #1a3b6d;
@@ -114,4 +118,19 @@ body.dark-mode .form-text,
 body.dark-mode .text-muted,
 body.dark-mode .post-author strong {
     color: rgb(230, 230, 230) !important;
+}
+
+body.dark-mode .view-more-btn,
+body.dark-mode .edit-btn,
+body.dark-mode .delete-btn {
+    background-color: #2d3748 !important;
+    border-color: #4a5568 !important;
+    color: #e2e8f0 !important;
+}
+
+body.dark-mode .view-more-btn:hover,
+body.dark-mode .edit-btn:hover,
+body.dark-mode .delete-btn:hover {
+    background-color: #4a5568 !important;
+    border-color: #718096 !important;
 }

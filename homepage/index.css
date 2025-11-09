@@ -1,4 +1,6 @@
 /* ----- LANDING PAGE CSS ----- */
+
+/* TITLE AND SUBTITLE SECTION */
 .hero-title {
     align-content: center;
 }
@@ -58,11 +60,12 @@
     animation: fadeIn 1.5s ease-out forwards; /* Fade in animation */
     opacity: 0; /* Start invisible */
 }
+/* Fade in animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
+/* Slide in animation */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -86,7 +89,6 @@
 }
 
 /* MEET THE CHARACTERS SECTION */
-
 /* Select all carousel images */
 #characterCarousel .carousel-item img {
     transition: transform 0.3s ease; /* Smooth zoom */
@@ -109,11 +111,15 @@
 .latestActivity {
     background-color: #8198bb;
 }
+#latestPosts {
+    font-family: 'Subtitle', Arial, sans-serif;
+}
+
 /* Individual styling for the posts */
 .post-card {
   background-color: #ffffff;
   border-left: 6px solid #1d3f72; /* accent border on the left side*/
-  transition: all 0.3s ease; /* makes the entire element responsive */
+  transition: all 0.3s ease; /* make the entire element responsive */
 }
 
 .post-card:hover {
@@ -121,12 +127,7 @@
   box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
 }
 
-/* Post title */
-.post-title {
-  color: #1d3f72;
-}
-
-/* Post description */
+.post-title,
 .post-author strong {
   color: #1d3f72;
 }
@@ -135,7 +136,8 @@
 .catFacts {
     position: relative;
 }
-/* Makes a cat emoji that bounces up and down */
+
+/* Make a cat emoji that bounces up and down */
 .catFacts::before {
     content: '🐱';
     position: absolute;
@@ -173,4 +175,14 @@
 body.dark-mode .MainContent,
 body.dark-mode .latestActivity {
     background-color: #1a3b6d;
+}
+
+body.dark-mode .post-card {
+  background-color: #3c5780;
+}
+
+body.dark-mode .post-author,
+body.dark-mode .text-muted,
+body.dark-mode .post-author strong {
+    color: rgb(230, 230, 230) !important;
 }

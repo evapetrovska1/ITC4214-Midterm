@@ -1,0 +1,158 @@
+/* RECENT MOVIES CSS */
+
+/* TITLE SECTION */
+.movies {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    min-height: 60vh;
+    background: url('../images/movies/alex.gif') center center / cover no-repeat; /* add the gif as background */
+}
+
+.movies::before { /* Before the main content loads */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(185, 201, 224, 0.2);
+    background-size: 400% 400%;
+    z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+.movies .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* TRAILERS SECTION */
+.trailer-card {
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 10px solid #1d3f72;
+    transition: all 0.3s ease;
+    height: 100%;
+    background-color: rgb(129, 152, 187,0.5);
+}
+
+.trailer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(29, 63, 114, 0.3);
+    border-left-color: #ffd700;
+}
+/* The youtube videos styles */
+.video-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+/* QUIZ SECTION */
+.quiz-section {
+    background-color: #8198bb;
+    box-shadow: 0 10px 25px rgba(29, 63, 114, 0.5);
+}
+#quizContainer {
+    background: rgba(255, 255, 255, 0.95);
+    font-family: 'Subtitle', Arial, sans-serif;
+    color: #1d3f72;
+    padding: 40px 30px;
+    border-radius: 15px;
+    border-left: 4px solid #1d3f72;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+/* Make the quiz border change color & move up on hover */
+#quizContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(29, 63, 114, 0.3);
+    border-left-color: #ffd700;
+}
+
+/* WHEEL SECTION */
+.wheel-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 4s cubic-bezier(0.2, 0.8, 0.3, 1);
+  background: conic-gradient(
+    #58cc02 0deg 60deg,
+    #f5a623 60deg 120deg,
+    #f03e3e 120deg 180deg,
+    #228be6 180deg 240deg,
+    #845ef7 240deg 300deg,
+    #fd7e14 300deg 360deg
+  );
+}
+
+/* Add segment dividers */
+.wheel::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    transparent 0deg 60deg,
+    rgba(255,255,255,0.3) 60deg 61deg
+  );
+}
+
+/* Individual segment styling */
+.segment {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 5%;
+  left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+/* Rotations for each segment */
+.segment:nth-child(1) { transform: rotate(30deg); }
+.segment:nth-child(2) { transform: rotate(90deg); }
+.segment:nth-child(3) { transform: rotate(150deg); }
+.segment:nth-child(4) { transform: rotate(210deg); }
+.segment:nth-child(5) { transform: rotate(270deg); }
+.segment:nth-child(6) { transform: rotate(330deg); }
+
+.arrow {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid red;
+  z-index: 10;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode .quiz-section {
+    background-color: #1a3b6d;
+}
+body.dark-mode .text-muted {
+    color: rgb(230, 230, 230) !important;
+}
+body.dark-mode #quizQuestion {
+    color: #1d3f72 !important;
+}
+body.dark-mode .wheel {
+    border: 10px solid #c4c4c4;   
+}

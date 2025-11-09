@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make sure the website works properly across devices -->
+    <title> DreamWorks Discussion Hub </title>
+    <!-- Import Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../components/components.css">
+    <link rel="stylesheet" href="movies.css">
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="../components/components.js" defer></script>
+    <script src="movies.js" defer></script>
+    <!-- Confetti Cod-->
+    <script src="https://run.confettipage.com/here.js" data-confetticode="U2FsdGVkX1+3C/ItfbOLDQjq8cVSyCzhV+helXyIC1Cqkq2ffwPr/aeb3n53kPyrfAU8b4H+gl5te7fFvQ1aasKcQufzi6vHzWwOYDXEQsdxJLqgEqBr/zxxZCz+5+osP7tXoaLWQ2Toh1CujlJ3GnZP6sYlYVn8pp7zY5DJdCdPhc+tCONxkKXbdpPefnT9AiNSuuVaXLdhXehIsIM7CPREGgx8jq48FJOSXPsXHKy0qp7slAXXxENWPFp0BQSrsGiQ16TTxDIU8FFgqG11FOupKiKyaoGstc1VjrD5yJf0+oUc8L4a1JGF+M3dTpEmoI0ERqDes22X1i6ud98vmiSLFgyFnFiVx0Zv3ZjyO4c8acyoYe0FH7DaJO773CQ+yRDeS6cZIQ8U5dZdhdAXmaRplL67+9xivEQCmQLLSoDnblkpOqBLGFRhQgQq51n5u/OIF1ZCvw438gRMVR/St7SmDpatlTjJNMxEVrhLS1WQlEwNMHSaocOWmP/ePNHTH3nVFn30HuJcLGRSKjdnYeDe40xMnntscuocNB3XkDvrhqbNdvhtSx6AEa6K9xN8Pu44Us+fGCuNcvx4dd2DvtzlGqDLUqHUr0aX6A2A7zRmQNwiq4zd86jWz65JMdjLvP9seZW8jX1JgZwgFp2tPYuK6obTjC1lnITZn0UybQ8bm7Hr1ZweNr/0E9vwCB/eSB3/G13EJrWA6C8JVpGU+WZU9mCjHc9hFuFlRaDOAK0w0Inp74LhKPmirnwEO2yW"></script>
+
+</head>
+<body>
+    <!--  ----- NAVIGATION BAR ----- -->
+    <div id="navbar"></div>
+
+    <!-- ----- MAIN TITLE AND SUBTITLE ----- -->
+    <section class="movies py-5 d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-3 p-3"> Latest Movies & More </h1>
+            <h2 class="lead fs-4 mb-4 p-3">New Adventures, New Heroes, Same DreamWorks Charm </h2>
+        </div>
+    </section>
+
+    <!-- ----- MOVIES CONTENT ----- -->
+
+    <!-- Section: Trailers -->
+    <section class="trailers p-4 mx-4 my-4 rounded">
+        <div class="container-lg text-center">
+            <h1 class="my-2 mb-2"> 🎬 Featured Trailers </h1>
+            <p class="lead mb-4">
+            Grab your popcorn — it's trailer time! 🍿
+            Get a sneak peek at the newest adventures, heroes, and hilarious moments from the DreamWorks universe.
+            </p>
+
+            <!-- First row of trailers -->
+            <div class="row g-4 my-2">
+                <!-- Shrek 5 Trailer -->
+                <div class="col-lg-6">
+                    <div class="trailer-card">
+                        <h4> Shrek 5 (2026)</h4>
+                        <div class="video-container text-center">
+                            <iframe src="https://www.youtube.com/embed/KbiwL74KyJQ?si=RK8BCJSnkGh9scZY" 
+                            title="Shrek 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="mt-3">
+                            The grumpiest ogre in the swamp is back, and he's still not a morning person! Shrek, Donkey, and Fiona are dragged into another 'happily ever after' that's about as smooth as dragon 
+                            scales. Expect more swamp parties, more fairy tale chaos, and more Donkey commentary than you can shake a magic wand at!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- The Wild Robot Trailer -->
+                <div class="col-lg-6">
+                    <div class="trailer-card">
+                        <h4> The Wild Robot (2025)</h4>
+                        <div class="video-container text-center">
+                            <iframe src="https://www.youtube.com/embed/67vbA5ZJdKQ?si=NDQnUYh56GM5Aw_f" 
+                            title="The Wild Robot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="mt-3">
+                            Meet Roz - a robot who's more 'beep-boop-oops' than 'terminator'! Washed up on a wild island, this fancy piece of technology suddenly has to learn important life skills 
+                            like 'don't step on the squirrels' and 'geese make terrible roommates.' Watch as she goes from calculating probabilities to calculating how many berries it takes to feed a 
+                            hungry gosling. It's Wall-E meets Mother Nature in the most awkward, heartwarming family reunion ever!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second row of trailers -->
+            <div class="row g-4 my-2">
+                <!-- The Bad Guys 2 Trailer -->
+                <div class="col-lg-6">
+                    <div class="trailer-card">
+                        <h4> The Bad Guys 2 (2025)</h4>
+                        <div class="video-container text-center">
+                            <iframe src="https://www.youtube.com/embed/TY1lWh20VSw?si=_l4Y3UKgNmm3x0o6" 
+                            title="The Bad Guys 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="mt-3">
+                            The world's most lovable criminals return! Mr. Wolf and his crew of misfits are trying to be good... ish. But when a new villain makes their heists look like amateur hour, 
+                            these 'reformed' baddies must prove they're still the best at being worst. It's oceans eleven meets animal house - literally!
+                        </p>
+                    </div>
+                </div>
+                
+
+                <!-- Puss in Boots Trailer -->
+                <div class="col-lg-6">
+                    <div class="trailer-card">
+                        <h4> Puss in Boots: The Last Wish (2022)</h4>
+                        <div class="video-container text-center">
+                            <iframe src="https://www.youtube.com/embed/RqrXhwS33yc?si=Wzxii31N6V-BbxQY" 
+                            title="Puss in Boots" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="mt-3">
+                            Puss in Boots used up eight lives being fabulous. Now he's on his last life and suddenly very interested in not dying! Join the fearless feline on his most purr-ilous 
+                            adventure yet as he hunts for a mythical wish that might just save his whiskers. Fear me? Maybe just a little bit now!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Movie Quiz -->
+    <section class="quiz-section p-4 mx-4 my-4 rounded">
+        <div class="container-lg text-center">
+            <h1 class="mb-3">🎯 Movie Pop Quiz</h1>
+            <p class="lead mb-4">
+                Grab your thinking cap! 🎓 Can you ace this DreamWorks challenge?<br>
+                <small class="text-muted">Perfect scores get bragging rights in the swamp!</small>
+            </p>
+
+            <div id="quizContainer" class="my-5 py-4 rounded">
+                <p id="quizQuestion" class="fw-bold fs-5">
+                    <!-- Question will be loaded here by movies.js -->
+                </p>
+                <div id="quizOptions" class="d-flex flex-column align-items-center gap-2 mb-3">
+                    <!-- Options will be loaded here by movies.js -->
+                </div>
+                <!-- Button for next question -->
+                <button id="nextBtn" class="btn btn-lg px-5 button-general">
+                    Next Question
+                </button>
+                <div id="quizScore" class="mt-3 fw-bold fs-5">
+                    <!-- Final score will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Section: Spin the Wheel -->
+    <section class="spinTheWheel p-4 mx-4 my-4 rounded">
+        <div class="container-lg text-center">
+            <h1 class="mb-3"> No Idea What to Watch Next?</h1>
+            <p class="lead mb-4 ">
+                Not sure what to watch tonight? Give the wheel a spin and let fate pick your next DreamWorks adventure! 🍿
+            </p>
+            
+            <div class="wheel-container mx-auto mb-4">
+                <div class="wheel" id="wheel">
+                    <!-- The wheel will get loaded here by movies.js -->
+                </div>
+                <div class="arrow"></div>
+            </div>
+
+            <button id="spinBtn" class="btn btn-lg px-5 button-general">🎡 Spin!</button>
+
+            <h2 id="result" class="mt-4 fw-bold"></h2>
+            
+        </div>
+    </section>
+    
+    <!--  ----- FOOTER ----- -->
+    <div id="footer"></div>
+
+</body>
